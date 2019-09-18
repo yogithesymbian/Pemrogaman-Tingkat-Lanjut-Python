@@ -76,12 +76,15 @@ def flowAssignTest():  # log flow assign testing
                     # end of flow obat nyamuk
 
 
-def resultArray(data1, data2):
+def resultArray(data1, data2, stat):
     isi = 0  # init for arr value (increment)
     for i in range(data1):
         for j in range(data2):
             isi += 1
-            arr[j][i] = isi
+            if stat == 1:
+                arr[i][j] = isi
+            if stat == 2:
+                arr[j][i] = isi
 
     # arr[0][5] = 1
     # show the array
@@ -97,7 +100,7 @@ def arrMethod1(isi):
 
     """)
     # method 1
-    resultArray(rows, cols)  # horizontal resultArray(i, j)
+    resultArray(rows, cols, stat=1)  # horizontal resultArray(i, j)
 
 
 def arrMethod2(isi):
@@ -111,7 +114,7 @@ def arrMethod2(isi):
     # just invert the first method
     # to get vertical flow assign
     # ##
-    resultArray(cols, rows)  # vertical resultArray(j,i)
+    resultArray(cols, rows, stat=2)  # vertical resultArray(j,i)
 
 
 def arrMethod3(isi):
@@ -145,7 +148,7 @@ def arrMethod3(isi):
 
 def start():
     # flowAssignTest()
-    # arrMethod1(0)
+    arrMethod1(0)
     arrMethod2(0)
     # arrMethod3(0)
 
