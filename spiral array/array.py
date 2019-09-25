@@ -1,5 +1,5 @@
 __author__ = "Yogi Arif Widodo"
-__copyright__ = "Copyright 2019"
+__copyright__ = "(C) 2019"
 __version__ = "0.1"
 __email__ = "yogirenbox33@gmail.com"
 __status__ = "Development"
