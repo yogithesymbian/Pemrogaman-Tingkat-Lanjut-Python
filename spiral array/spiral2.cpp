@@ -1,3 +1,4 @@
+// new reference
 #include <iostream>
 using namespace std;
 
@@ -5,8 +6,8 @@ int main()
 {
 	int n;
 	cout << "Enter the size of the array :";
-	cin >> n; /*n Size of the array*/
-	int A[n][n]; //
+	cin >> n;					  /*n Size of the array*/
+	int A[n][n];				  //
 	int len = n, k = 1, p = 0, i; /*k is to assign the values to the array from 1...n*n */
 								  /*len is used to update(decrease) array size so that values cans be assign to them */
 

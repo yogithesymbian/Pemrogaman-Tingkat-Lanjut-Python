@@ -1,3 +1,4 @@
+# NIM : 17 615 006
 __author__ = "Yogi Arif Widodo"
 __copyright__ = "(C) 2019"
 __version__ = "0.1"
@@ -9,7 +10,7 @@ __info__ = "URL scodeid"
 # MY - REFERENCE
 # https://www.geeksforgeeks.org/print-a-given-matrix-in-spiral-form/
 import sys
-from color import ColorPrint as warna
+# from color import ColorPrint as warna
 # Python 3 program to demonstrate working
 # of method 1 (horizontal) and method 2 (vertical) and method3 (obat nyamuk).
 
@@ -239,8 +240,7 @@ default: rows is (5) and cols is (6)
 
 
 def mySpiralAssign():
-    initA = 0
-    initB = 0
+    initA=initB = 0
     isi = 0
     endValue = 0
     bottomValue = 0
@@ -335,13 +335,13 @@ def mySpiralAssign():
 
 
 def start():
-    myHeaderProg()
-    myMenuProg()
+    # myHeaderProg()
+    # myMenuProg()
 
     # horizontal & vertical
     # flowAssignTest()
     # spiral
-    # mySpiralAssign()
+    mySpiralAssign()
 
     ioMenu = input('.\n. \t\t\t [*].Choose Num : ')
     if ioMenu == '1':
