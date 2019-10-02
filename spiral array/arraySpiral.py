@@ -50,3 +50,5 @@ while isi < baris * kolom :
             arah = 3
             bawah -= 1
     isi += 1
+
+print("")
