@@ -1,0 +1,5 @@
+bits = '01101101'
+int(bits,2)
+int('4f', 16)
+int(bits, 2)
+chr(int(bits,2))

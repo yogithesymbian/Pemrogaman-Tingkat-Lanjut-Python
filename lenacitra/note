@@ -1,0 +1,6 @@
+# # format(ord(a[0]), '08b') # to bner
+# format(ord(a[0]), '08b') # to bner
+# konversi ascii to bit
+
+# for i in range(len(frasa)):
+#     print(frasa[i], ord(frasa[i]))
