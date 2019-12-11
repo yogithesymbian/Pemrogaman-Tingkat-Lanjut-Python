@@ -38,7 +38,7 @@ if (citraUji1.shape == citraUji2.shape):
     mae += np.abs((citraUji1 - citraUji2)).mean()
     mse += ((citraUji1-citraUji2)**2).mean()
     print("Nilai MAE : ", mae)
-    print("Nilai MSE : ", mae)
+    print("Nilai MSE : ", mse)
 else:
     print("ukuran berbeda")
 
