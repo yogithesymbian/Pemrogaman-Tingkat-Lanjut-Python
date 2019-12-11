@@ -25,7 +25,7 @@ def writeCSVFile(filename, llist):
 def hitungMAE(teks1, teks2):
     #bandingkan ukuran kedua file
     if len(teks1) == len(teks2):
-        print("Kedua file memiliki ukuran yang sama")
+        print("[MAE] Kedua file memiliki ukuran yang sama")
 
         #hitung nilai mse
         jmlchar = len(teks1)
@@ -47,7 +47,7 @@ def hitungMAE(teks1, teks2):
 def hitungMSE(teks1, teks2):
     #bandingkan ukuran kedua file
     if len(teks1) == len(teks2):
-        print("Kedua file memiliki ukuran yang sama")
+        print("[MSE] Kedua file memiliki ukuran yang sama")
 
         #hitung nilai mse
         jmlchar = len(teks1)

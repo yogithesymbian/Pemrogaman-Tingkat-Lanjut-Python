@@ -2,7 +2,7 @@ import numpy as np
 import cv2
 
 # deklarasi array
-baris = kolom = 5
+baris = kolom = 4
 # uint8 max is 255
 arr = np.ndarray(shape=(baris, kolom), dtype='uint8')
 arr[:] = 0
