@@ -1,4 +1,4 @@
-input()
+# input()
 
 nilai = int(input(" int angka : "))
 nilai = float(input(" angka pecahan: "))

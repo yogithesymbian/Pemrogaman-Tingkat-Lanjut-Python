@@ -1,12 +1,12 @@
 teks = "saya belum mandi kemarin sore"
-print(teks)
-print(teks[:]) # seluruh
-print(teks[7:])
-print(teks[:7])
-print(teks[7:15])
-print(teks[-1])
-print(teks[-2])
-print(teks[::-1])
+print("normal", teks)
+print("one slicing : ", teks[:]) # seluruh
+print("first slice 7 : ", teks[7:])
+print("last slice 7 : ",teks[:7])
+print("first slice 7 and last 15 : ", teks[7:15])
+print("first slice -1 :",teks[-1])
+print("first slice -2 : ",teks[-2])
+print("double last slice -1 : ",teks[::-1])
 
 print(teks.count("a"))
 print(teks.split())

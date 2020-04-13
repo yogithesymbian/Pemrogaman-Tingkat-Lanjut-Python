@@ -30,5 +30,5 @@ for i in range(len(llist)):
 llist[2:]
 llist[1:-1]
 llist[1:-3]
-llist[0]
+# llist[0]
 llist[0][-1]

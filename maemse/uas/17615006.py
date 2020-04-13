@@ -21,4 +21,4 @@ if len(teks1) == len(teks2):
     print("jml abs   : ", jmlabs)
     print("nilai mae :", mae)
 else:
-    print("jumlah gk sama")
+    print("jumlah gk sama")u
