@@ -1,5 +1,5 @@
 
-fun test() : ArrayList<String> {
+fun PrimeNumberGenerator() : ArrayList<String> {
 
     val arrayListPrimeNumber = ArrayList<String>()
 
@@ -20,5 +20,5 @@ fun test() : ArrayList<String> {
 
 
 fun main(args: Array<String>) {
-    println(test().size)
+    println(PrimeNumberGenerator().size)
 }

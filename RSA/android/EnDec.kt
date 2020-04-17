@@ -1,8 +1,17 @@
 fun main(args: Array<String>) {
-    
-    val plainText = "BUDI"
-    val ePubKeyNya = "155"
-    val nNumber = "3383"
+
+    val plainText = """
+    Yogi Arif Widodo, [17.04.20 11:11]
+    <!--
+        [DOCUMENT-03]
+        Obat kehidupan adalah sederhana.
+        Sederhana itu cara hidup.
+        Cara hidup itu sederhana.
+                                 -->
+    """
+    val ePubKeyNya = "131"
+    val ePrivKey = "7931"
+    val nNumber = "9563"
 
     val arrayListAscii = ArrayList<String>()
     val arrayListCipher = ArrayList<String>()
@@ -17,14 +26,11 @@ fun main(args: Array<String>) {
             .remainder(nNumber.toBigDecimal())
 
         if (resultNya.toInt() <= 999)
-            arrayListCipher.add("0${resultNya.toInt()}")
+            arrayListCipher.add("${resultNya.toInt()}")
         else
             arrayListCipher.add("${resultNya.toInt()}")
     }
 
-
-
-    val ePrivKey = "2003"
 
     val arrayListAsciiBack = ArrayList<String>()
 
@@ -39,15 +45,34 @@ fun main(args: Array<String>) {
     (n)       : $nNumber
     plainText : $plainText
     ascii     : $arrayListAscii
+
     cipher    : $arrayListCipher
+
     PrivateKey: $ePrivKey
+
     asciiBack : $arrayListAsciiBack
 """.trimIndent()
 )
+
+    val arrayListAsciiBackChar = ArrayList<String>()
     // var test = ""
     for (i in 0 until  arrayListAsciiBack.size){
-        println("${arrayListAsciiBack[i].toInt().toChar()}")
+         arrayListAsciiBackChar.add(arrayListAsciiBack[i].toInt().toChar().toString())
+        // println("${arrayListAsciiBack[i].toInt().toChar()}")
         // test = "${arrayListAsciiBack[i].toInt().toChar()}"
     }
+
+    val hasilDekripsi = arrayListAsciiBackChar.joinToString(separator ="") { it }
+    println(hasilDekripsi)
+
+    val responseDekripsi = "data plainText dan hasil dekrips adalah sama : "
+
+    if (plainText == hasilDekripsi)
+        println("$responseDekripsi true")
+    else
+        println("$responseDekripsi false")
     // println(test)
+
+
+
 }

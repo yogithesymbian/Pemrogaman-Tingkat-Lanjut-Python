@@ -1,4 +1,4 @@
-const val limitPrime = "Politeknik Negeri Samarinda Tahun"
+const val limitPrime = "Politeknik Negeri Samarinda Tahun 2020"
 
 fun limitPrimeNumber() : Int{
 

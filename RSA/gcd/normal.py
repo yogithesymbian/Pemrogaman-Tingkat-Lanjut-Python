@@ -1,3 +1,7 @@
+import datetime
+
+start = datetime.datetime.now()
+
 # Recursive function to return gcd of a and b
 def gcd(a,b):
 
@@ -25,3 +29,5 @@ else:
     print('not found')
 
 # This code is contributed by Danish Raza
+finish = datetime.datetime.now()
+print("start : {} \n finish : {} \n hasil : {}".format(start,finish, finish-start))
