@@ -1,13 +1,13 @@
 fun main(args: Array<String>) {
 
     val plainText = """
-    Yogi Arif Widodo, [17.04.20 11:11]
+    Yogi Arif Widodo, [17.04.20 10:55]
+    السلامعليكمورحمةاللهبركاته
     <!--
-        [DOCUMENT-03]
-        Obat kehidupan adalah sederhana.
-        Sederhana itu cara hidup.
-        Cara hidup itu sederhana.
-                                 -->
+    (DOCUMENT~3986)
+    Obat kehidupan adalah sederhana.
+    Sederhana itu cara hidup.
+    Cara hidup itu sederhana.-->
     """
     val ePubKeyNya = "131"
     val ePrivKey = "7931"
