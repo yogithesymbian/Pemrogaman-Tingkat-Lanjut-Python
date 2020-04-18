@@ -12,7 +12,10 @@ fun PrimeNumberGenerator() : ArrayList<String> {
             }
         if (isPrime) // flagPrime true ?; !println
             arrayListPrimeNumber.add(num.toString()) //assign the value to an arrayList of prime
-    //                println(num) // num
+            // println(num) // num
+    }
+    for (i in 1..arrayListPrimeNumber.size){
+        println("data ke-$i = ${arrayListPrimeNumber[i]}")
     }
     return arrayListPrimeNumber
 
