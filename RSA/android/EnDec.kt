@@ -20,9 +20,9 @@ fun main(args: Array<String>) {
     """
     // println("length plainText : ${plainText.length}")
     // P1
-    val ePubKeyNya = "131"
-    val ePrivKey = "7931"
-    val nNumber = "9563"
+    // val ePubKeyNya = "131"
+    // val ePrivKey = "7931"
+    // val nNumber = "9563"
 
     // P2
     // val ePubKeyNya = "227"
@@ -44,6 +44,80 @@ fun main(args: Array<String>) {
     // val ePrivKey = "1373"
     // val nNumber = "6107"
 
+    // PDATA 1 #
+    // val ePubKeyNya = "1867"
+    // val ePrivKey = "29203"
+    // val nNumber = "237323"
+
+    // PDATA 2
+    // val ePubKeyNya = "191"
+    // val ePrivKey = "38039"
+    // val nNumber = "64241"
+
+    // PDATA 3
+    // val ePubKeyNya = "301"
+    // val ePrivKey = "40333"
+    // val nNumber = "73319"
+
+    // PDATA 4
+    // val ePubKeyNya = "551"
+    // val ePrivKey = "7127"
+    // val nNumber = "246749"
+
+    // PDATA 5
+    // val ePubKeyNya = "409"
+    // val ePrivKey = "160865"
+    // val nNumber = "219991"
+
+    // PDATA 6
+    // val ePubKeyNya = "101"
+    // val ePrivKey = "6701"
+    // val nNumber = "7373"
+
+    // PDATA 7
+    // val ePubKeyNya = "1489"
+    // val ePrivKey = "43249"
+    // val nNumber = "437537"
+
+    // PDATA 8
+    // val ePubKeyNya = "137"
+    // val ePrivKey = "4073"
+    // val nNumber = "6191"
+
+    // PDATA 9
+    // val ePubKeyNya = "387"
+    // val ePrivKey = "18891"
+    // val nNumber = "24523"
+
+    // PDATA 10
+    val ePubKeyNya = "193"
+    val ePrivKey = "2257"
+    val nNumber = "8159"
+
+    // PDATA 11
+    // val ePubKeyNya = "515"
+    // val ePrivKey = "19115"
+    // val nNumber = "31921"
+
+    // PDATA 12
+    // val ePubKeyNya = "667"
+    // val ePrivKey = "1583"
+    // val nNumber = "2893"
+
+
+    // PDATA 13 | versi 2 | array.size - hh
+    // val ePubKeyNya = "1813"
+    // val ePrivKey = "187777"
+    // val nNumber = "192989"
+
+    println("""
+    plainText : $plainText
+    PublicKey : $ePubKeyNya
+    PrivateKey: $ePrivKey
+    (n)       : $nNumber
+""".trimIndent()
+)
+
     val arrayListAscii = ArrayList<String>()
     val arrayListCipher = ArrayList<String>()
 
@@ -57,7 +131,7 @@ fun main(args: Array<String>) {
             .remainder(nNumber.toBigDecimal())
 
         if (resultNya.toInt() <= 999)
-            arrayListCipher.add("${resultNya.toInt()}")
+            arrayListCipher.add("0${resultNya.toInt()}")
         else
             arrayListCipher.add("${resultNya.toInt()}")
     }
@@ -71,25 +145,14 @@ fun main(args: Array<String>) {
 
 //     println("""
 //     [*]
-//     polnes security
-//     PublicKey : $ePubKeyNya
-//     (n)       : $nNumber
-//     plainText : $plainText
 //     ascii     : $arrayListAscii
 
 //     cipher    : $arrayListCipher
 
-//     PrivateKey: $ePrivKey
-
 //     asciiBack : $arrayListAsciiBack
 // """.trimIndent()
 // )
-    println("""
-    plainText : $plainText
-    PrivateKey: $ePrivKey
-    (n)       : $nNumber
-""".trimIndent()
-)
+
 
     val arrayListAsciiBackChar = ArrayList<String>()
     // var test = ""

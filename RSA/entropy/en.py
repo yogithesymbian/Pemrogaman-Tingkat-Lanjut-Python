@@ -12,6 +12,8 @@ def entropy(data):
             p_x = count / lengthData        # avoid zero /
             entropy += - p_x * math.log2(p_x)
 
+        print("debug")
+
         return entropy
 # P = 73
 # Q = 131
@@ -19,7 +21,9 @@ def entropy(data):
 # Fai[N] = 9360
 # PUBLIK_KEY = 131
 # PRIVATE_KEY = 7931
-data = [73,131,9563,9360,131,7931]
+# data = [73,131,9563,9360,131,7931]
+# data = ["s","a","y","a"]
+data = [12,17,1,4,19,12,18,14,21,18,21,16,14]
 # data1 = [131,7931, 191, 6851, 151, 18535,#             151, 2263, 99, 347,101, 12477,#             103, 7763, 103, 5955]# datay = [459609268873, 4019492633373]
 
 print(entropy(data))

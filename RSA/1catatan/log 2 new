@@ -1,0 +1,123 @@
+2020-04-26 11:05:05.626 D/PrimeNumberGenerate: [*]
+    ===========================================
+                    TIME_INIT
+    ===========================================
+    default time : 1587870305600
+    waktu sekarang : 2020-04-26 11:05:05
+    Hours : 11
+    Min : 05
+    Sec : 05
+    ===========================================
+                    TIME_INIT
+    ===========================================
+2020-04-26 11:05:05.654 D/PrimeNumberGenerate: [*]
+    ascii decimal "Politeknik Negeri Samarinda Tahun 2020 is 3400
+    range prime number is 2 until 3400
+    result size prme number is 478
+2020-04-26 11:05:06.661 D/ChoosePq: result size prime number is 478
+2020-04-26 11:05:06.670 D/ChoosePq: random data choosen : 17
+2020-04-26 11:05:06.674 D/ChoosePq: list gmt            : [GMT-1, GMT-2, GMT-3, GMT-4, GMT-5, GMT-6, GMT-7, GMT-8, GMT-9, GMT-10, GMT-11, GMT+1, GMT+2, GMT+3, GMT+4, GMT+5, GMT+6, GMT+7, GMT+8, GMT+9, GMT+10, GMT+11, GMT+12, GMT+13]
+    pilihanya adalah    : GMT+7
+2020-04-26 11:05:06.684 D/ChoosePq: 24 hour format = convert time to GMT+7 12:05:06
+2020-04-26 11:05:06.684 D/ChoosePq: 12 hour format = 12 : 05 : 06
+2020-04-26 11:05:06.684 D/ChoosePq: outer check : 12 : 05 : 06
+2020-04-26 11:05:06.684 D/ChoosePq: debug check
+2020-04-26 11:05:06.689 D/ChoosePq: [*]
+    ==============================================
+    TIME POSITION
+    ==============================================
+    when position 1 < 2 3 4 5 6 use [ GMT+8 //DEFAULT has change into GMT+7]
+    1 = 12  HOUR * 4
+    1 < 5  MIN
+    1 < 6  SEC
+    1 < 11  MIN + SEC
+    1 < 60  MIN * SEC
+    1 < 30  HR  * MIN
+    ================================================
+    INIT BEFORE SET DATA POSITION
+    FOR RESULT PRIME [ ARRAY LIST ] POSITION | TIME
+    ================================================
+2020-04-26 11:05:06.689 D/ChoosePq: timePosition P = 12 * 4
+2020-04-26 11:05:06.689 D/ChoosePq: result timePosition P = 48
+2020-04-26 11:05:06.689 D/ChoosePq: 5 timePosition Q
+2020-04-26 11:05:06.689 D/ChoosePq: number P : 227 | where thePrime[timePosition]
+2020-04-26 11:05:06.689 D/ChoosePq: number Q : 283 | where thePrime[timePosition]
+2020-04-26 11:05:07.693 D/CountPq: [*]
+    gcd ( p -1 , q - 1 )
+    G.C.D = 2 // the result should not big
+2020-04-26 11:05:07.694 D/CountPq: result number n : 64241
+2020-04-26 11:05:07.694 D/CountPq: result number fai[n] : 63732
+2020-04-26 11:05:08.765 D/SummonKey: [*]
+    result gcd ( e[i], faiN ) is much ,
+    size is gcd 1 = 20607
+    size is e 20607
+    value1 arrayListResultGcd
+    and
+    value2 arrayListEPublicKey
+    last value 63731
+2020-04-26 11:05:09.813 D/SummonKey: decrypt | private key : 38039
+2020-04-26 11:05:09.825 D/MainActivity: [*]
+    PublicKey (e) : ( 191 , 64241 )
+    Privatekey (d): ( 38039 , 64241 )
+
+
+2020-04-26 11:15:04.868 D/PrimeNumberGenerate: [*]
+    ===========================================
+                    TIME_INIT
+    ===========================================
+    default time : 1587870904858
+    waktu sekarang : 2020-04-26 11:15:04
+    Hours : 11
+    Min : 15
+    Sec : 04
+    ===========================================
+                    TIME_INIT
+    ===========================================
+2020-04-26 11:15:04.878 D/PrimeNumberGenerate: [*]
+    ascii decimal "Politeknik Negeri Samarinda Tahun 2020 is 3400
+    range prime number is 2 until 3400
+    result size prme number is 478
+2020-04-26 11:15:05.890 D/ChoosePq: result size prime number is 478
+2020-04-26 11:15:05.892 D/ChoosePq: random data choosen : 4
+2020-04-26 11:15:05.895 D/ChoosePq: list gmt            : [GMT-1, GMT-2, GMT-3, GMT-4, GMT-5, GMT-6, GMT-7, GMT-8, GMT-9, GMT-10, GMT-11, GMT+1, GMT+2, GMT+3, GMT+4, GMT+5, GMT+6, GMT+7, GMT+8, GMT+9, GMT+10, GMT+11, GMT+12, GMT+13]
+    pilihanya adalah    : GMT-5
+2020-04-26 11:15:05.898 D/ChoosePq: 24 hour format = convert time to GMT-5 00:15:05
+2020-04-26 11:15:05.899 D/ChoosePq: 12 hour format = 12 : 15 : 05
+2020-04-26 11:15:05.899 D/ChoosePq: outer check : 12 : 15 : 05
+2020-04-26 11:15:05.899 D/ChoosePq: debug check
+2020-04-26 11:15:05.903 D/ChoosePq: [*]
+    ==============================================
+    TIME POSITION
+    ==============================================
+    when position 1 < 2 3 4 5 6 use [ GMT+8 //DEFAULT has change into GMT-5]
+    1 = 12  HOUR * 4
+    1 < 15  MIN
+    1 < 5  SEC
+    1 < 20  MIN + SEC
+    1 < 180  MIN * SEC
+    1 < 75  HR  * MIN
+    ================================================
+    INIT BEFORE SET DATA POSITION
+    FOR RESULT PRIME [ ARRAY LIST ] POSITION | TIME
+    ================================================
+2020-04-26 11:15:05.903 D/ChoosePq: timePosition P = 12 * 4
+2020-04-26 11:15:05.903 D/ChoosePq: result timePosition P = 48
+2020-04-26 11:15:05.903 D/ChoosePq: 5 timePosition Q =  180
+2020-04-26 11:15:05.903 D/ChoosePq: number P : 227 | where thePrime[timePosition]
+2020-04-26 11:15:05.903 D/MainActivity: number Q : 1087 | where thePrime[timePosition]
+2020-04-26 11:15:06.908 D/CountPq: [*]
+    gcd ( p -1 , q - 1 )
+    G.C.D = 2 // the result should not big
+2020-04-26 11:15:06.908 D/CountPq: result number n : 246749
+2020-04-26 11:15:06.908 D/CountPq: result number fai[n] : 245436
+2020-04-26 11:15:08.078 D/SummonKey: [*]
+    result gcd ( e[i], faiN ) is much ,
+    size is gcd 1 = 80639
+    size is e 80639
+    value1 arrayListResultGcd
+    and
+    value2 arrayListEPublicKey
+    last value 245435
+2020-04-26 11:15:09.177 D/MainActivity: [*]
+    PublicKey (e) : ( 551 , 246749 )
+    Privatekey (d): ( 7127 , 246749 )
