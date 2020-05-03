@@ -90,9 +90,9 @@ fun main(args: Array<String>) {
     // val nNumber = "24523"
 
     // PDATA 10
-    val ePubKeyNya = "193"
-    val ePrivKey = "2257"
-    val nNumber = "8159"
+    // val ePubKeyNya = "193"
+    // val ePrivKey = "2257"
+    // val nNumber = "8159"
 
     // PDATA 11
     // val ePubKeyNya = "515"
@@ -106,9 +106,9 @@ fun main(args: Array<String>) {
 
 
     // PDATA 13 | versi 2 | array.size - hh
-    // val ePubKeyNya = "1813"
-    // val ePrivKey = "187777"
-    // val nNumber = "192989"
+    val ePubKeyNya = "1813"
+    val ePrivKey = "187777"
+    val nNumber = "192989"
 
     println("""
     plainText : $plainText
@@ -120,56 +120,60 @@ fun main(args: Array<String>) {
 
     val arrayListAscii = ArrayList<String>()
     val arrayListCipher = ArrayList<String>()
+    // val arrayListCipher = mutableListOf(
+    //     22295, 190072, 190072, 190072, 190072, 69198, 69198, 69198, 185514, 145416, 99917, 55244, 190072, 54735, 20003, 55244, 118763, 190072, 66278, 55244, 120350, 145416, 120350, 145416, 146586, 190072, 182343, 56057, 148977, 40848, 117307, 1928, 40848, 85252, 117307, 190072, 56057, 117307, 85608, 147871, 147871, 60706, 69198, 69198, 69198, 22295, 190072, 190072, 190072, 190072, 161986, 127000, 43730, 43730, 127000, 107859, 127000, 130918, 171866, 79162, 127000, 107859, 127000, 55244, 60667, 171866, 130918, 190072, 52452, 127000, 20003, 20003, 127000, 152609, 130918, 127000, 120101, 171866, 107859, 107859, 127000, 152609, 55244, 190072, 52452, 127000, 30723, 127000, 20003, 127000, 60667, 127000, 120101, 171866, 152609, 161986, 22295, 190072, 190072, 190072, 190072, 133459, 17216, 7351, 7351, 22295, 190072, 190072, 190072, 190072, 82850, 16002, 54735, 106795, 54735, 106795, 54735, 17273, 115895, 59850, 54735, 120571, 54735, 40782, 129374, 35731, 69159, 94585, 108904, 22295, 190072, 190072, 190072, 190072, 22141, 30723, 127000, 120101, 190072, 60667, 191250, 152609, 55244, 120350, 171866, 26980, 127000, 48131, 190072, 127000, 120350, 127000, 107859, 127000, 152609, 190072, 43730, 191250, 120350, 191250, 20003, 152609, 127000, 48131, 127000, 40848, 22295, 190072, 190072, 190072, 190072, 120571, 191250, 120350, 191250, 20003, 152609, 127000, 48131, 127000, 190072, 55244, 120101, 171866, 190072, 17006, 127000, 20003, 127000, 190072, 152609, 55244, 120350, 171866, 26980, 40848, 22295, 190072, 190072, 190072, 190072, 16002, 127000, 20003, 127000, 190072, 152609, 55244, 120350, 171866, 26980, 190072, 55244, 120101, 171866, 190072, 43730, 191250, 120350, 191250, 20003, 152609, 127000, 48131, 127000, 40848, 190072, 147348, 43730, 55244, 130918, 26980, 191250, 107859, 7351, 7351, 161118, 22295, 190072, 190072, 190072, 190072
+    // )
 
+    // enkripsi
     for (element in plainText) {
-        if (element.toInt() <= 99)
+        if (element.toInt() <= 99) // plainText (character) ke ascii code
             arrayListAscii.add("0${element.toInt()}")
         else
             arrayListAscii.add("${element.toInt()}")
-
+        // ascii code ke blockcipher
         val resultNya = element.toInt().toBigDecimal().pow(ePubKeyNya.toInt())
             .remainder(nNumber.toBigDecimal())
-
-        if (resultNya.toInt() <= 999)
+        // masukan hasil ke array list cipher
+        if (resultNya.toInt() <= 999) // assign fill 0
             arrayListCipher.add("0${resultNya.toInt()}")
         else
             arrayListCipher.add("${resultNya.toInt()}")
     }
 
 
-    val arrayListAsciiBack = ArrayList<String>()
+    // val arrayListAsciiBack = ArrayList<String>()
 
-    for (i in 0 until  arrayListCipher.size){
-        arrayListAsciiBack.add(arrayListCipher[i].toInt().toBigDecimal().pow(ePrivKey.toInt()).remainder(nNumber.toBigDecimal()).toString())
-    }
+    // // dekripsi blockcipher to ascii code
+    // for (i in 0 until  arrayListCipher.size){
+    //     arrayListAsciiBack.add(arrayListCipher[i].toInt().toBigDecimal().pow(ePrivKey.toInt()).remainder(nNumber.toBigDecimal()).toString())
+    // }
 
-//     println("""
-//     [*]
-//     ascii     : $arrayListAscii
+    println("""
+    [*]
+    ascii     : $ arrayListAscii
 
-//     cipher    : $arrayListCipher
+    cipher    : $arrayListCipher
 
-//     asciiBack : $arrayListAsciiBack
-// """.trimIndent()
-// )
+    asciiBack : $ arrayListAsciiBack
+""".trimIndent()
+)
+    // // ascii code to character (plainText)
+    // val arrayListAsciiBackChar = ArrayList<String>()
+    // // var test = ""
+    // for (i in 0 until  arrayListAsciiBack.size){
+    //      arrayListAsciiBackChar.add(arrayListAsciiBack[i].toInt().toChar().toString())
+    //     // println("${arrayListAsciiBack[i].toInt().toChar()}")
+    //     // test = "${arrayListAsciiBack[i].toInt().toChar()}"
+    // }
+    // val responseDekripsi = "data plainText dan hasil dekripsi adalah sama : "
 
+    // val hasilDekripsi = arrayListAsciiBackChar.joinToString(separator ="") { it }
+    // println("hasil dekripsi \n $hasilDekripsi")
 
-    val arrayListAsciiBackChar = ArrayList<String>()
-    // var test = ""
-    for (i in 0 until  arrayListAsciiBack.size){
-         arrayListAsciiBackChar.add(arrayListAsciiBack[i].toInt().toChar().toString())
-        // println("${arrayListAsciiBack[i].toInt().toChar()}")
-        // test = "${arrayListAsciiBack[i].toInt().toChar()}"
-    }
-    val responseDekripsi = "data plainText dan hasil dekripsi adalah sama : "
-
-    val hasilDekripsi = arrayListAsciiBackChar.joinToString(separator ="") { it }
-    println("hasil dekripsi \n $hasilDekripsi")
-
-    if (plainText == hasilDekripsi && plainText.length == hasilDekripsi.length)
-        println("$responseDekripsi true")
-    else
-        println("$responseDekripsi false")
+    // if (plainText == hasilDekripsi && plainText.length == hasilDekripsi.length)
+    //     println("$responseDekripsi true")
+    // else
+    //     println("$responseDekripsi false")
 
 
 }
