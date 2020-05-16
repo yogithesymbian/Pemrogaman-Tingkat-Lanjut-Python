@@ -20,9 +20,9 @@ fun main(args: Array<String>) {
     """
     // println("length plainText : ${plainText.length}")
     // P1
-    // val ePubKeyNya = "131"
-    // val ePrivKey = "7931"
-    // val nNumber = "9563"
+    val ePubKeyNya = "131"
+    val ePrivKey = "7931"
+    val nNumber = "9563"
 
     // P2
     // val ePubKeyNya = "227"
@@ -106,9 +106,9 @@ fun main(args: Array<String>) {
 
 
     // PDATA 13 | versi 2 | array.size - hh
-    val ePubKeyNya = "1813"
-    val ePrivKey = "187777"
-    val nNumber = "192989"
+    // val ePubKeyNya = "1813"
+    // val ePrivKey = "187777"
+    // val nNumber = "192989"
 
     println("""
     plainText : $plainText
