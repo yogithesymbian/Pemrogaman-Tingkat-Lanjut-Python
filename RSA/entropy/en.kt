@@ -75,9 +75,9 @@ fun main(args: Array<String>){
 
     for (count in counterDataValue){ // loop for probability data value
         // println(count)
-        var pX = count.toDouble() / dataList.size
-        // println(pX)
-        entropy += - pX * log2(pX)      // formula entropy
+        var PXi = count.toDouble() / dataList.size
+        // println(PXi)
+        entropy += - PXi * log2(PXi)      // formula entropy
         // println(entropy)
     }
     println("entropy : $entropy")

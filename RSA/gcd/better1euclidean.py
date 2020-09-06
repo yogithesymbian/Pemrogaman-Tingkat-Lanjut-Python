@@ -12,8 +12,8 @@ def gcd(a,b):
     return gcd(b, a%b)
 
 # Driver program to test above function
-a = 98
-b = 56
+a = 157
+b = 263
 if(gcd(a, b)):
     print('GCD of', a, 'and', b, 'is', gcd(a, b))
 else:

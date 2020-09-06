@@ -9,20 +9,33 @@ fun main(args: Array<String>) {
     // Sederhana itu cara hidup.
     // Cara hidup itu sederhana.-->
     // """
+    // val plainText = """
+    // ```Yogi Arif Widodo, [17.04.20 10:55]```
+    // *assalamu'alaikum warrahmatullahi wabarakatuh*
+    // <!--
+    // (CATATANBIASA~3986)
+    // Obat kehidupan adalah sederhana.
+    // Sederhana itu cara hidup.
+    // Cara hidup itu sederhana. #simpel-->
+    // """
+//     val plainText = """
+// “Ketahuilah, bahwa sesungguhnya kehidupan dunia ini hanyalah permainan dan suatu yang melalaikan, perhiasan dan bermegah-megah antara kamu serta berbangga-banggaan tentang banyaknya harta dan anak, seperti hujan yang tanam-tanamannya mengagumkan para petani; kemudian tanaman itu menjadi kering dan kamu lihat warnanya kuning kemudian menjadi hancur. Dan di akhirat (nanti) ada azab yang keras dan ampunan dari Allah serta keridhaan-Nya. Dan kehidupan dunia ini tidak lain hanyalah kesenangan yang menipu.”
+//     """
+//         val plainText = """
+// "Know, that truly the life of this world is only a game and a neglect, adornment and boasting among you and boasting about the abundance of wealth and children, like rain whose crops amaze the peasants; Then the plant dries up and you see it is yellow and then crumbles. And in the hereafter (later) there will be harsh punishment and forgiveness from Allah and His good pleasure. And the life of this world is nothing but deceptive pleasures. "
+//     """
+//         val plainText = """
+// Politeknik Samarinda. Politeknik Samarinda. Politeknik Samarinda. Politeknik Samarinda. Politeknik Samarinda. Politeknik Samarinda. Politeknik Samarinda. Politeknik Samarinda. Politeknik Samarinda. Politeknik Samarinda. Politeknik Samarinda. Politeknik Samarinda. Politeknik Samarinda. Politeknik Samarinda. Politeknik Samarinda. Politeknik Samarinda. Politeknik Samarinda. Politeknik Samarinda. Politeknik Samarinda. Politeknik Samarinda.Politeknik Samarinda.Politeknik Samarinda.Politeknik Samarinda.
+//         """
     val plainText = """
-    ```Yogi Arif Widodo, [17.04.20 10:55]```
-    *assalamu'alaikum warrahmatullahi wabarakatuh*
-    <!--
-    (CATATANBIASA~3986)
-    Obat kehidupan adalah sederhana.
-    Sederhana itu cara hidup.
-    Cara hidup itu sederhana. #simpel-->
+jika menggunakan simbol !@#$%^&*()_+{}:"><[];',/|~` apakah memiliki has1l perbandingan sama atau berbeda, belum diketahui karena sedang dicoba dan lihatlah disamping ini hasilnya jika menggunakan simbol ! dikeyboard sampai simbol ? dengan berdasarkan informasi peranti waktu yang digunakan dalam penentuan p dan q yang detailnya ada pada tahapan sebelumnya, ok! nb: fokus analisanya ada pada nilai keacakan data yang menggunakan shannon enteropi
     """
+
     // println("length plainText : ${plainText.length}")
     // P1
-    val ePubKeyNya = "131"
-    val ePrivKey = "7931"
-    val nNumber = "9563"
+    val ePubKeyNya = "137"
+    val ePrivKey = "22073"
+    val nNumber = "36391"
 
     // P2
     // val ePubKeyNya = "227"
@@ -112,6 +125,7 @@ fun main(args: Array<String>) {
 
     println("""
     plainText : $plainText
+    jml karakter : ${plainText.length}
     PublicKey : $ePubKeyNya
     PrivateKey: $ePrivKey
     (n)       : $nNumber
@@ -135,45 +149,62 @@ fun main(args: Array<String>) {
             .remainder(nNumber.toBigDecimal())
         // masukan hasil ke array list cipher
         if (resultNya.toInt() <= 999) // assign fill 0
-            arrayListCipher.add("0${resultNya.toInt()}")
+            arrayListCipher.add("${resultNya.toInt()}")
         else
             arrayListCipher.add("${resultNya.toInt()}")
     }
 
 
-    // val arrayListAsciiBack = ArrayList<String>()
+    val arrayListAsciiBack = ArrayList<String>()
 
-    // // dekripsi blockcipher to ascii code
-    // for (i in 0 until  arrayListCipher.size){
-    //     arrayListAsciiBack.add(arrayListCipher[i].toInt().toBigDecimal().pow(ePrivKey.toInt()).remainder(nNumber.toBigDecimal()).toString())
-    // }
+    // dekripsi blockcipher to ascii code
+    for (i in 0 until  arrayListCipher.size){
+        arrayListAsciiBack.add(arrayListCipher[i].toInt().toBigDecimal().pow(ePrivKey.toInt()).remainder(nNumber.toBigDecimal()).toString())
+    }
+
+    // cipher to ASCII
+    val arrayListCipherToChar = ArrayList<String>()
+    for (i in 0 until  arrayListCipher.size){
+         arrayListCipherToChar.add(arrayListCipher[i].toInt().toChar().toString())
+    }
+    val hasilCipherToAscii = arrayListCipherToChar.joinToString(separator ="") { it }
+
+// Οዌዌዌᅒ⎶ᬅ⊊଱ᬅᑛዃᬅ„ᅒ„ᅒᆒຯᖯ᜾׏⋼ƽ׏ጡ⋼ᖯ
+// ⋼୼ߢߢḋዌዌዌΟтҋҋᓤᶘᇛ᫃ᓤᬅପᇛᶘ଱଱↫ᶘʀᇛᓤ
+// ᓤ↫ᬅ˱଱ପʀᇛ↫тΟမҼᚱᚱΟኯ⊊ජ⊊ජ⊊ǋI⊊Ϩ⊊⇹ᘺ
+// ⎇႖૨Οጾ˱ʀପ༼↫ᬅ„ᇛᬌ࢞„ᓤ↫ҋ༼„༼଱↫࢞׏ΟϨ༼„
+// ༼଱↫࢞ᬅʀᇛɯ଱↫ᬅ„ᇛᬌ׏Οኯ଱↫ᬅ„ᇛᬌᬅʀᇛ
+// ҋ༼„༼଱↫࢞׏ᒛҋᬅᶘᬌ༼ᓤᚱᚱᡋΟ
+
 
     println("""
     [*]
-    ascii     : $ arrayListAscii
+    ascii     : $arrayListAscii
 
     cipher    : $arrayListCipher
 
-    asciiBack : $ arrayListAsciiBack
+    cipherAscii : $hasilCipherToAscii
+
+    asciiBack : $arrayListAsciiBack
 """.trimIndent()
 )
-    // // ascii code to character (plainText)
-    // val arrayListAsciiBackChar = ArrayList<String>()
-    // // var test = ""
-    // for (i in 0 until  arrayListAsciiBack.size){
-    //      arrayListAsciiBackChar.add(arrayListAsciiBack[i].toInt().toChar().toString())
-    //     // println("${arrayListAsciiBack[i].toInt().toChar()}")
-    //     // test = "${arrayListAsciiBack[i].toInt().toChar()}"
-    // }
-    // val responseDekripsi = "data plainText dan hasil dekripsi adalah sama : "
+    // ascii code to character (plainText)
+    val arrayListAsciiBackChar = ArrayList<String>()
+    // var test = ""
+    for (i in 0 until  arrayListAsciiBack.size){
+         arrayListAsciiBackChar.add(arrayListAsciiBack[i].toInt().toChar().toString())
+        // println("${arrayListAsciiBack[i].toInt().toChar()}")
+        // test = "${arrayListAsciiBack[i].toInt().toChar()}"
+    }
+    val responseDekripsi = "data plainText dan hasil dekripsi adalah sama : "
 
-    // val hasilDekripsi = arrayListAsciiBackChar.joinToString(separator ="") { it }
-    // println("hasil dekripsi \n $hasilDekripsi")
+    val hasilDekripsi = arrayListAsciiBackChar.joinToString(separator ="") { it }
+    println("\nhasil dekripsi \n $hasilDekripsi")
 
-    // if (plainText == hasilDekripsi && plainText.length == hasilDekripsi.length)
-    //     println("$responseDekripsi true")
-    // else
-    //     println("$responseDekripsi false")
+    if (plainText == hasilDekripsi && plainText.length == hasilDekripsi.length)
+        println("$responseDekripsi true")
+    else
+        println("$responseDekripsi false")
 
 
 }

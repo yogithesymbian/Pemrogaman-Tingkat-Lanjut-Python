@@ -11,7 +11,7 @@ __info__ = "URL scodeid"
 
 
 
-for num in range(1,100 + 1):
+for num in range(1,512 + 1):
     if num > 1: # pada saat num = 2 | if 2 > 1
         for i in range(2,num): # pas di line ini
             eliminasi = num % i
